@@ -1,0 +1,56 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--<meta name="_csrf" content="${_csrf.token}" />-->
+    <!--<meta name="_csrf_header" content="${_csrf.headerName}" />-->
+    <meta name="referrer" content="no-referrer" />
+    <script th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js}"></script>
+</head>
+<body>
+로그인 완료
+<!--<a href="/logout">-->
+<!--<form method="GET">-->
+    <!--<img th:src="@{/img/kakao_account_login_btn_medium_narrow_ov.png}" id="btn"/>-->
+    <!--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+<!--</form>-->
+<!--</a>-->
+<a th:href="@{/logouts}">
+    <img th:src="@{/img/kakao_account_login_btn_medium_narrow_ov.png}" id="btn"/>
+</a>
+<a th:href="@{/connect}">
+    연결
+</a>
+
+<script>
+
+    <!--var token = $("meta[name='_csrf']").attr("content");-->
+    <!--var header = $("meta[name='_csrf_header']").attr("content");-->
+
+    <!--$(document).ajaxSend(function(e, xhr, options) {-->
+      <!--xhr.setRequestHeader(header, token);-->
+    <!--});-->
+
+
+    <!--$(document).ready(function() {-->
+    <!--$("#btn").click(function(e) {-->
+    <!--e.preventDefault();-->
+
+    <!--$.ajax({-->
+        <!--url: "https://kauth.kakao.com/oauth/authorize?client_id=1d6424c5ede35360104614fe6fb6d405&redirect_uri=http://localhost:8080/callback&response_type=code",-->
+        <!--type: "GET",-->
+        <!--success: function(responseData) {-->
+            <!--console.log("responseData" + JSON.stringify(responseData);-->
+        <!--},-->
+        <!--error: function(error) {-->
+            <!--console.log("error" + JSON.stringify(error));-->
+        <!--}-->
+    <!--});-->
+    <!--});-->
+    <!--});-->
+
+</script>
+</body>
+</html>
